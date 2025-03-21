@@ -51,7 +51,7 @@ LogiRegServerCRUD is a full‑stack mini project demonstrating a complete user a
      json-server --watch server.json --port 3000
      ```
 4. **Launch the Application**
-   - Open the project using a local server (e.g., Live Server in VS Code) or serve the files using your preferred method.
+   - Open the project using a local server (e.g., Live Server in VS Code) or serve the files using your preferred method. run index.html after start the JSON server
 
 ## 🔄 How It Works
 **Registration**
