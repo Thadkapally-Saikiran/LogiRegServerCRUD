@@ -1,0 +1,26 @@
+/* Global Styles */ /* Comment: Section header for global styles */
+body { /* Selects the <body> element */
+    background: #f0f2f5; /* Sets the background color to a light grayish-blue */
+    font-family: 'Arial', sans-serif; /* Sets the font family to Arial, with sans-serif as fallback */
+}
+  
+/* Card styling for forms */ /* Comment: Section header for card styling */
+.card { /* Selects elements with class "card" */
+    border: none; /* Removes any border from the card */
+    border-radius: 10px; /* Rounds the corners of the card with a radius of 10px */
+}
+  
+/* Navbar custom styling */ /* Comment: Section header for navbar custom styles */
+.navbar-brand { /* Selects elements with class "navbar-brand" */
+    font-weight: bold; /* Makes the text bold */
+}
+  
+/* Buttons hover effects */ /* Comment: Section header for button hover effects */
+.btn:hover { /* Targets any element with class "btn" on hover */
+    opacity: 0.9; /* Reduces the opacity to 0.9 when hovered over, creating a subtle effect */
+}
+  
+/* Container for dashboard */ /* Comment: Section header for container styling */
+.container { /* Selects elements with class "container" */
+    margin-top: 30px; /* Adds a top margin of 30px to provide spacing from the top */
+}

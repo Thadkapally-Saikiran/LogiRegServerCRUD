@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": "5dfa",
+      "name": "Tirupathi Reddy",
+      "email": "tirupathireddy231@gmail.com",
+      "phNo": "8341968012",
+      "password": "Tirupathi@2001"
+    },
+    {
+      "id": "4591",
+      "name": "Shekar",
+      "email": "shekarbasha@gmail.com",
+      "phNo": "8978954586",
+      "password": "Shekar@1995"
+    }
+  ]
+}

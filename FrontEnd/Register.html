@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Root element with language set to English -->
+<head> <!-- Start of head section containing meta and title information -->
+  <meta charset="UTF-8"> <!-- Specifies the character encoding as UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configures the viewport for responsive design -->
+  <title>Register Page</title> <!-- Sets the title of the page -->
+  <!-- Bootstrap CSS --> <!-- Comment indicating Bootstrap CSS is being used -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Link to Bootstrap CSS from CDN -->
+  <link rel="stylesheet" href="./style.css"> <!-- Link to the custom stylesheet -->
+</head>
+<body class="bg-light"> <!-- Start of body section with a light background -->
+  <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100"> <!-- Bootstrap container with flex utilities to center content vertically and horizontally, taking full viewport height -->
+    <div class="card p-4 shadow" style="max-width:400px; width:100%;"> <!-- Card element with padding and shadow, maximum width set to 400px -->
+      <h2 class="text-center mb-4">Register</h2> <!-- Heading 2 centered with a bottom margin -->
+      <form name="registerForm" onsubmit="register(event);"> <!-- Registration form with name attribute and onsubmit event handler that calls the register function -->
+        <div class="mb-3"> <!-- Div with bottom margin for spacing -->
+          <label for="name" class="form-label">Name</label> <!-- Label for the name input field -->
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter full name"> <!-- Text input field for full name with placeholder -->
+          <div id="errorName" class="form-text text-danger"></div> <!-- Div for displaying error message for name, styled as red text -->
+        </div>
+        <div class="mb-3"> <!-- Div with bottom margin for spacing -->
+          <label for="email" class="form-label">Email address</label> <!-- Label for the email input field -->
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter email"> <!-- Email input field with placeholder -->
+          <div id="errorEmail" class="form-text text-danger"></div> <!-- Div for displaying error message for email, styled as red text -->
+        </div>
+        <div class="mb-3"> <!-- Div with bottom margin for spacing -->
+          <label for="phNo" class="form-label">Phone Number</label> <!-- Label for the phone number input field -->
+          <input type="tel" id="phNo" name="phNo" class="form-control" placeholder="Enter 10-digit phone number"> <!-- Telephone input field with placeholder -->
+          <div id="errorPh" class="form-text text-danger"></div> <!-- Div for displaying error message for phone number, styled as red text -->
+        </div>
+        <div class="mb-3"> <!-- Div with bottom margin for spacing -->
+          <label for="pass" class="form-label">Password</label> <!-- Label for the password input field -->
+          <input type="password" id="pass" name="pass" class="form-control" placeholder="Enter password (min 6 characters)"> <!-- Password input field with placeholder -->
+          <div id="errorPass" class="form-text text-danger"></div> <!-- Div for displaying error message for password, styled as red text -->
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button> <!-- Submit button styled as a full-width success button -->
+      </form>
+      <p class="mt-3 text-center">Already have an account? <a href="./Login.html">Login here</a></p> <!-- Paragraph with link to the login page -->
+    </div>
+  </div>
+  <!-- Axios & Bootstrap Bundle JS --> <!-- Comment indicating the scripts below -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Link to Axios library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Link to Bootstrap JavaScript bundle from CDN -->
+  <script src="./script.js"></script> <!-- Link to custom JavaScript file -->
+</body>
+</html>
