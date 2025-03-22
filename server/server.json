@@ -1,11 +1,10 @@
 {
   "students": [
     {
-      "id": "5dfa",
       "name": "Tirupathi Reddy",
       "email": "tirupathireddy231@gmail.com",
       "phNo": "8341968012",
-      "password": "Tirupathi@2001"
+      "id": "5dfa"
     },
     {
       "id": "4591",

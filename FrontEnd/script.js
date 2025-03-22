@@ -69,7 +69,7 @@ async function register(event) { // Define an async function 'register' that tak
 
   try { // Try block to catch any errors during registration process
       // POST new user data to JSON server
-      await axios.post("https://logi-reg-server.onrender.com/students", userData); // Send POST request with userData to JSON server endpoint
+      await axios.post("http://localhost:3000/students", userData); // Send POST request with userData to JSON server endpoint
       alert("Registration successful!"); // Alert the user of successful registration
       form.reset();
       // Redirect to login page after successful registration
@@ -121,7 +121,7 @@ async function login(event) { // Define an async function 'login' that takes an 
 
   try { // Try block to handle login process
     // GET all users from JSON server
-    let res = await axios.get("https://logi-reg-server.onrender.com/students"); // Send GET request to JSON server to fetch all users
+    let res = await axios.get("http://localhost:3000/students"); // Send GET request to JSON server to fetch all users
     const users = res.data; // Store the retrieved users data
     // Find a user that matches the credentials provided in the form
     const foundUser = users.find(user => user.email === email && user.password === password); // Use find() to search for matching user
@@ -145,7 +145,7 @@ async function login(event) { // Define an async function 'login' that takes an 
 // Fetch and display users in a table
 async function getUsers() { // Define an async function 'getUsers'
   try { // Try block to catch errors during user retrieval
-    let res = await axios.get("https://logi-reg-server.onrender.com/students"); // Send GET request to JSON server to fetch all students
+    let res = await axios.get("http://localhost:3000/students"); // Send GET request to JSON server to fetch all students
     const users = res.data; // Store the retrieved user data
     // Start building HTML table string
     let tableHTML = `
@@ -193,7 +193,7 @@ async function getUsers() { // Define an async function 'getUsers'
 async function deleteUser(userId) { // Define an async function 'deleteUser' that takes a user ID as parameter
   if (!confirm("Are you sure you want to delete this user?")) return; // Confirm deletion; if canceled, exit function
   try { // Try block to handle deletion process
-    await axios.delete(`https://logi-reg-server.onrender.com/students/${userId}`); // Send DELETE request to JSON server for the specific user
+    await axios.delete(`http://localhost:3000/students/${userId}`); // Send DELETE request to JSON server for the specific user
     alert("User deleted successfully!"); // Alert that the user was deleted successfully
     getUsers(); // Refresh the user list by calling getUsers()
   } catch (error) { // Catch block for deletion errors
@@ -205,7 +205,7 @@ async function deleteUser(userId) { // Define an async function 'deleteUser' tha
 // Open the update modal and populate fields with user data
 async function openUpdateModal(userId) { // Define an async function 'openUpdateModal' that takes a user ID as parameter
   try { // Try block to catch errors during user data retrieval
-    let res = await axios.get(`https://logi-reg-server.onrender.com/students/${userId}`); // Send GET request for specific user data from JSON server
+    let res = await axios.get(`http://localhost:3000/students/${userId}`); // Send GET request for specific user data from JSON server
     const user = res.data; // Store the retrieved user data
     document.getElementById("updateId").value = user.id; // Set the hidden update ID field with user ID
     document.getElementById("updateName").value = user.name; // Populate the update name field with user name
@@ -281,7 +281,7 @@ async function updateUser() { // Define an async function 'updateUser'
   const updatedData = { name, email, phNo };
 
   try { // Try block to catch errors during update
-    await axios.put(`https://logi-reg-server.onrender.com/students/${id}`, updatedData); // Send PUT request to update user data on JSON server
+    await axios.put(`http://localhost:3000/students/${id}`, updatedData); // Send PUT request to update user data on JSON server
     alert("User updated successfully!"); // Alert the user that the update was successful
     // Hide the update modal
     let updateModal = bootstrap.Modal.getInstance(document.getElementById("updateModal")); // Retrieve the current modal instance
